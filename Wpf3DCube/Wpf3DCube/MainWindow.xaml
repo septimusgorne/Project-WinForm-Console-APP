@@ -1,0 +1,270 @@
+﻿<Window x:Class="Wpf3DCube.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mycode="clr-namespace:Wpf3DCube.Cube"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+    <Grid Background="#0000AA">
+        <Viewport3D Margin="0,-10,0,10">
+            <Viewport3D.Camera>
+                <PerspectiveCamera
+                    x:Name="perCamera" 
+                    Position="0,0,5" 
+                    LookDirection="0,0,-5" 
+                    UpDirection="0,1,0" />
+            </Viewport3D.Camera>
+
+
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <Model3DGroup>
+                        <AmbientLight Color="#FF444444"></AmbientLight>
+                        <PointLight Color="White" Position="-2,8,5"></PointLight>
+                    </Model3DGroup>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+
+
+            <!--<Коллекция объединяющая 3D вид и трансформацию!!!!.
+            Рисовать можно используя только класс Cube3D, 
+            наследуемый от ModelVisual3D.
+            >-->
+
+            <mycode:Cube3D x:Name="Cube1"
+                Size="0.2" 
+                Position="-0.6,0,0" 
+                Front="#9acd32" 
+                Top="#7b68ee" 
+                Left="#696969" 
+                Back="#7fffd4" 
+                Bottom="#8a2be2" 
+                Right="#e6e6fa" >
+                <ModelVisual3D.Transform>
+                    <Transform3DGroup>
+                        <RotateTransform3D CenterX="-0.6">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="1,0,0" 
+                                    Angle="30" 
+                                    x:Name="rotateX"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <RotateTransform3D CenterX="-0.6">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="0,1,0" 
+                                    Angle="30" 
+                                    x:Name="rotateY"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <RotateTransform3D CenterX="-0.6">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="0,0,1" 
+                                    Angle="30" 
+                                    x:Name="rotateZ"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                    </Transform3DGroup>
+                </ModelVisual3D.Transform>
+            </mycode:Cube3D>
+
+            <mycode:Cube3D x:Name="Cube2"
+                Size="0.5" 
+                Position="0,0,0" 
+                Front="Red" 
+                Top="Yellow" 
+                Left="Blue" 
+                Back="DeepPink" 
+                Bottom="DarkGreen" 
+                Right="White" >
+                <ModelVisual3D.Transform>
+                    <Transform3DGroup>
+                        <RotateTransform3D CenterX="0">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="1,0,0" 
+                                    Angle="60" 
+                                    x:Name="rotateX2"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <RotateTransform3D CenterX="0">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="0,1,0" 
+                                    Angle="60" 
+                                    x:Name="rotateY2"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <RotateTransform3D CenterX="0">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="0,0,1" 
+                                    Angle="60" 
+                                    x:Name="rotateZ2"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                    </Transform3DGroup>
+                </ModelVisual3D.Transform>
+            </mycode:Cube3D>
+
+            <mycode:Cube3D x:Name="Cube3"
+                Size="0.2" 
+                Position="0.6,0,0" 
+                Front="#483d8b" 
+                Top="#800080" 
+                Left="#db7093" 
+                Back="#008080" 
+                Bottom="#808000" 
+                Right="#7cfc00" >
+                <ModelVisual3D.Transform>
+                    <Transform3DGroup>
+                        <RotateTransform3D CenterX="0.6">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="1,0,0" 
+                                    Angle="90" 
+                                    x:Name="rotateX3"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <RotateTransform3D CenterX="0.6">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="0,1,0" 
+                                    Angle="90" 
+                                    x:Name="rotateY3"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                        <RotateTransform3D CenterX="0.6">
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D 
+                                    Axis="0,0,1" 
+                                    Angle="90" 
+                                    x:Name="rotateZ3"/>
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                    </Transform3DGroup>
+                </ModelVisual3D.Transform>
+            </mycode:Cube3D>
+
+        </Viewport3D>
+
+        <!--<Button Width="100" Height="100" Margin="0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Button.Click">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateX" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="720" 
+                            Duration="0:0:5"/>
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateY" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="720" 
+                            Duration="0:0:6"/>
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateZ" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="720" 
+                            Duration="0:0:6"/>
+
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateX2" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:6"/>
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateY2" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:5"/>
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateZ2" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:6"/>
+
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateX3" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="1800" 
+                            Duration="0:0:5"/>
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateY3" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:6"/>
+                            <DoubleAnimation 
+                            Storyboard.TargetName="rotateZ3" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="720" 
+                            Duration="0:0:3"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>-->
+
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="Grid.MouseDown">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateX" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="720" 
+                            Duration="0:0:5"/>
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateY" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="720" 
+                            Duration="0:0:6"/>
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateZ" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="720" 
+                            Duration="0:0:6"/>
+
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateX2" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:6"/>
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateY2" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:5"/>
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateZ2" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:6"/>
+
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateX3" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="1080" 
+                            Duration="0:0:6"/>
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateY3" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:6"/>
+                        <DoubleAnimation 
+                            Storyboard.TargetName="rotateZ3" 
+                            Storyboard.TargetProperty="Angle" 
+                            From="0" To="360" 
+                            Duration="0:0:5"/>
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Grid.Triggers>
+
+    </Grid>
+</Window>

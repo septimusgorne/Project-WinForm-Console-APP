@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "hIFr7Pvztis1FnAHKYsJTzp974UTj8mSU9lXZsNxPCPJnUANjaWBlstCE5edVkoa6lu4MfJ4iOQoZMRIF/wmIQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dj_ar\\OneDrive\\Рабочий стол\\Wpf3DCube\\Wpf3DCube\\Wpf3DCube.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dj_ar\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.4\\microsoft.netcore.app.host.win-x64.6.0.4.nupkg.sha512",
+    "C:\\Users\\dj_ar\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.4\\microsoft.aspnetcore.app.ref.6.0.4.nupkg.sha512",
+    "C:\\Users\\dj_ar\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.4\\microsoft.windowsdesktop.app.ref.6.0.4.nupkg.sha512",
+    "C:\\Users\\dj_ar\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.4\\microsoft.netcore.app.ref.6.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
